@@ -278,7 +278,7 @@ class GESGModel(BaseModel):
         """Calculate GAN loss for discriminator D_As"""
         fake_B = self.fake_B_pool.query(self.fake_B)
         self.loss_D_A = self.backward_D_basic(self.netD_A, self.real_B, fake_B)
-        self.loss_D_par = self.backward_D_par()
+        self.loss_D_par = self.backward_D_par() * self.opt.lambda_part_adv
         self.loss_D_A_all = self.loss_D_A + self.loss_D_par
         self.loss_D_A_all.backward()
 
