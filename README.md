@@ -9,3 +9,4 @@
 `python train.py --name experiment_name --dataroot /path/to/your_datasets`
 # Testing
 `python test.py --name experiment_name --dataroot /path/to/your_datasets`
+ 
