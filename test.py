@@ -39,7 +39,6 @@ if __name__ == '__main__':
         model.test()           # run inference
         time_e = time.time()
         interval = time_e-time_s
-        print("===",interval,"====")
         total_time+=interval
         visuals = model.get_current_visuals()  # get image results
         img_path = model.get_image_paths()     # get image paths
@@ -49,4 +48,4 @@ if __name__ == '__main__':
         count+=1
     webpage.save()  # save the HTML
 
-    print ("total : ",total_time/count)
+    print ("time : ",total_time/count)
